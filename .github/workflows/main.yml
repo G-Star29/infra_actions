@@ -73,5 +73,5 @@ jobs:
             # Выполняет pull образа с DockerHub
             sudo docker pull torokoff/infra_project:latest
             #остановка всех контейнеров
-            sudo docker container stop $(sudo docker ps -a -q)
-            sudo docker run --rm -d -p 5000:5000 torokoff/infra_project:latest/
+            sudo docker stop $(sudo docker ps -a -q)
+            sudo docker run --rm -d -p 5000:5000 torokoff/infra_project:latest
